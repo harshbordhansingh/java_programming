@@ -1,0 +1,24 @@
+package loops;
+
+import java.util.Scanner;
+
+public class SeriesSum {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int n = sc.nextInt();
+        float result;
+        float b = 0;
+        float c = 0;
+        for (float i = 1; i<=n; i++){
+//            result += 1/i;
+            if (i % 2 != 0){
+                b += 1/i;
+            }if (i % 2 == 0){
+                c -= 1/i;
+            }
+        }
+        result = b + c;
+        System.out.println("Your desired number is: " + result);
+    }
+}
